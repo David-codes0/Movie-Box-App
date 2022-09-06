@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "650051272658",
+    "project_id": "vidflix-movie-app",
+    "storage_bucket": "vidflix-movie-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650051272658:android:2471648dfdc5d1cec5120b",
+        "android_client_info": {
+          "package_name": "com.davidcode0.vidflix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650051272658-u3ev9v6lmgtut7gvndg3ojalriffc6ii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7xvaSQdtIy3StxsW6WTrwwcb2rBmDwes"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650051272658-u3ev9v6lmgtut7gvndg3ojalriffc6ii.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "650051272658-k6f6iefqsoiqckdt0sgges6c1g7mqmvi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.davidcode0.vidflix"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
