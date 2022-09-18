@@ -9,12 +9,19 @@ import 'package:vidflix/utility/dialogs/error_dialog.dart';
 
 class FirebaseAuthServices with ChangeNotifier {
   FirebaseAuth? _auth;
+   var _indexClicked = 0;
   bool _otpSent = false;
   bool _userBusyCreating = false;
   bool _emailSent = false;
+  int get indexClicked => _indexClicked;
   bool get otpSent => _otpSent;
   bool get userBusyCreating => _userBusyCreating;
   bool get emailSent => _emailSent;
+
+  void pageClicked(int pagesIndex) {
+    _indexClicked = pagesIndex;
+    notifyListeners();
+  }
 
   Future<void> phoneSigI(String phoneNumber, BuildContext context) async {
     _otpSent = true;

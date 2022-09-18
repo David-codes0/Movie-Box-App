@@ -12,6 +12,7 @@ class SearchFieldWidget extends StatelessWidget {
       padding: const EdgeInsets.all(15.0),
       child: Container(
         height: 30,
+        
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(10)),
           color: Constants.kGreyColor.withOpacity(0.2),

@@ -141,9 +141,7 @@ class MovieDetailsScreen extends StatelessWidget {
                     ),
                     child: RawMaterialButton(
                       onPressed: () {
-                        if (moviePlayer[castMovieIndex].url == '') {
-                          const SorryPage();
-                        }
+           
                         Navigator.of(context).push(
                           CustomRoutePage(
                             child: moviePlayer[castMovieIndex],
@@ -298,7 +296,11 @@ class CastsDetails extends StatelessWidget {
             minRadius: 16,
             maxRadius: 16,
             backgroundImage:
-                AssetImage(newMovies[castIndex].movieCast[index]['image']!),
+                newMovies[castIndex].movieCast[index]['image'] == ''
+                    ? const AssetImage('assets/movie-cast-img/profile-picture.jpg')
+                    : AssetImage(
+                        newMovies[castIndex].movieCast[index]['image']!,
+                      ),
           ),
           Expanded(
             child: Container(

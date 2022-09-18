@@ -2,6 +2,7 @@ import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 
 import 'package:video_player/video_player.dart';
+import 'package:vidflix/models/movie.dart';
 
 class VideoPlayerScreen extends StatefulWidget {
   const VideoPlayerScreen(
@@ -50,14 +51,14 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
           elevation: 0,
           backgroundColor: Colors.black,
         ),
-        body: FutureBuilder(
+        body: widget.url == 'url' ? const SorryPage( ) :  FutureBuilder(
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.done) {
               if (snapshot.hasError) {
                 return Center(
                   child: Text(
                     '${snapshot.error} occurred',
-                    style: TextStyle(fontSize: 18),
+                    style: const TextStyle(fontSize: 18),
                   ),
                 );
               } else if (snapshot.hasData) {
@@ -66,6 +67,8 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                     controller: _chewieController!,
                   ),
                 );
+              }else if (snapshot.data == 'url'){
+
               }
             }
             return const Center(
@@ -78,9 +81,9 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
 }
 
 List<VideoPlayerScreen> moviePlayer = [
-  VideoPlayerScreen(movieTitle: '', url: 'url'),
-  VideoPlayerScreen(movieTitle: '', url: 'url'),
-  VideoPlayerScreen(
+  const VideoPlayerScreen(movieTitle: '', url: 'url'),
+  const VideoPlayerScreen(movieTitle: '', url: 'url'),
+  const VideoPlayerScreen(
       movieTitle: 'Eternals',
       url:
           'https://b.mandela.h.sabishare.com/dl/aCWqrAphP70/81d77010f9d33b8620b5c8192c3c28a4247497cc247a709a16f22a66c78e1c55/Eternals_(2021)_(NetNaija.com).mp4'),

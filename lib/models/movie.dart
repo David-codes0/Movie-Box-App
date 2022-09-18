@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vidflix/screens/appprogress_anime.dart';
 import 'package:vidflix/screens/movies_detail_screen.dart';
 
 class Movie {
@@ -208,8 +209,30 @@ class SorryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text('Sorry No Movie'),
+    return Column(
+      children: [
+        const LottieAni(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Text(
+                'Movie Not Available',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                ),
+              ),
+            ),
+            Icon(
+              Icons.error,
+              color: Colors.red,
+              size: 40,
+            )
+          ],
+        )
+      ],
     );
   }
 }
